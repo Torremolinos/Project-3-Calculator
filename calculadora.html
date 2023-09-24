@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="desciption" content="Calculadora" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="conteiner">
+      <h1>Calculadora Básica</h1>
+      <form id="calculator-form">
+        <input
+          type="number"
+          id="first"
+          placeholder="Inserta el primer número"
+          required
+        />
+        <select name="elige el simbolo" id="choice" required>
+          <option value="add">+</option>
+          <option value="subtract">-</option>
+          <option value="multiply">*</option>
+          <option value="divide">/</option>
+        </select>
+        <input
+          type="number"
+          id="seccond"
+          placeholder="Inserta el segundo número"
+          required
+        />
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="result"></div>
+      <button id="reset">Empezar de cero</button>
+    </div>
+    <script src="Scripts/script.js"></script>
+  </body>
+</html>
