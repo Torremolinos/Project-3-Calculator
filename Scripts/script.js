@@ -17,7 +17,7 @@ function calcular() {
       break;
 
     case "divide":
-      num1==0 && num2 === 0 ? alert('No se puede dividir por 0') : resultado = num1 / num2;
+      num2 === 0 ? resultado = 'No se puede dividir por cero': resultado = num1 / num2;
       break;
       default:
         resultado= 'Operacion invalida';
@@ -29,13 +29,13 @@ function resetForm() {
   document.getElementById('calculator-form').reset();
   document.getElementById('result').textContent = '';
 }
-// Manejar el envío del formulario
-document.getElementById('calculator-form').addEventListener('submit', function (e) {
-  e.preventDefault(); // Evitar el envío del formulario
-  calculate();
+// Manejar el envío del formulario el preventDefault() es importante miralo bien con forms.
+document.getElementById('calculator-form').addEventListener('submit', (e)=> {
+  e.preventDefault(); // Evitar el envío del formulario, esto sirve para deshabilitar las funciones que tiene el form por defecto(y asi puedas tratarlo como quieras)
+  calcular();
 });
 
 // Manejar el botón de reinicio
-document.getElementById('reset').addEventListener('click', function () {
+document.getElementById('reset').addEventListener('click', ()=> {
   resetForm();
 });
